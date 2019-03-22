@@ -4,12 +4,6 @@
 .border-bottom-grey {
   border-bottom: 1px solid lightgrey;
 }
-.hide {
-  display: none;
-}
-.display-flex {
-  display: flex;
-}
 @font-face {
   font-family: 'PT Sans';
   font-style: italic;
@@ -223,6 +217,12 @@ body .border {
   .cards-container {
     width: 1200px;
   }
+}
+.cards-container .hidden {
+  display: none;
+}
+.cards-container .display-flex {
+  display: flex;
 }
 .cards-container .card {
   border-bottom: 1px solid lightgrey;
