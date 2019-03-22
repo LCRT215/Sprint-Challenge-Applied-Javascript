@@ -1,13 +1,16 @@
 class TabLink {
   constructor(tabElement) {
     this.tabElement = tabElement;
-    console.log(this.tabElement);
-    this.tabData = document.querySelector(
-      `.tab[data-tab="${this.tabElement.dataset.tab}`
-    );
+    // console.log(this.tabElement);
+    // this.tabData = document.querySelector(
+    //   `.tab[data-tab="${this.tabElement.dataset.tab}"]`
+    // );
+    this.tabData = tabElement.dataset.tab;
     console.log(this.tabData);
     // assign this.tabElement to the tabElement DOM reference
-    // this.tabElement;
+    this.tabElement = document.querySelector(
+      `.tab[data-tab="${this.tabElement.dataset.tab}"]`
+    );
     // Get the `data-tab` value from this.tabElement and store it here
     // this.tabData = ;
 
@@ -21,15 +24,18 @@ class TabLink {
       this.cards = document.querySelectorAll(`.card`);
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
-      this.cards = this.tabData;
+      // this.cards = document.querySelectorAll(
+      //   `.card[data-tab='${this.tabCard.dataset.tab}']`
+      // );
     }
+
     //console.log(document.querySelector(`.card`));
     //console.log(this.tabData);
 
     //<- Delete this comment block when you work on the if statement
 
     // Map over the newly converted NodeList we just created in our if statement above. Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class.
-    this.cards = Array.from(this.cards).map();
+    //this.cards = Array.from(this.cards).map();
     // Add a click event that invokes this.selectTab
     this.tabElement.addEventListener("click", () => {
       this.selectTab();
