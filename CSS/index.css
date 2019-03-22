@@ -4,6 +4,12 @@
 .border-bottom-grey {
   border-bottom: 1px solid lightgrey;
 }
+.hide {
+  display: none;
+}
+.display-flex {
+  display: flex;
+}
 @font-face {
   font-family: 'PT Sans';
   font-style: italic;
